@@ -1,5 +1,4 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { HttpClientService } from 'src/app/services/http.service';
 import { TransactionModel, transactionObject, transformTransactionInstance } from 'src/app/models/transaction.model';
 import { TransactionService } from 'src/app/services/transaction.service';
 import * as moment from 'moment';
@@ -19,7 +18,6 @@ export class TransactionHistoryComponent implements OnInit {
   orderType : string = 'desc'
   activeButton : string = 'date'
   constructor(
-    private http: HttpClientService,
     private transactionService : TransactionService,
     private fb : FormBuilder
     ) { 
